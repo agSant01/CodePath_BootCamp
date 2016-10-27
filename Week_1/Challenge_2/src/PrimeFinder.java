@@ -44,7 +44,8 @@ public class PrimeFinder {
 				primesBoolean[j] = true;
 			}
 		}
-	
+		
+		//Counts how many primes exists to initialize the result array
 		c = 0;
 		for(int i = 2; i < primesBoolean.length; i++){
 			if(primesBoolean[i] == false){
