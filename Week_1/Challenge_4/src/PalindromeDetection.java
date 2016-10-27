@@ -1,5 +1,3 @@
-import java.util.stream.IntStream;
-
 /**
  * PalindromeDetection.java
  *  
@@ -12,7 +10,7 @@ import java.util.stream.IntStream;
 public class PalindromeDetection {
 	public static void main (String[] agrs){
 		
-		String m = "hol aloh"; //String to input; Change at will
+		String m = "ho l a l oh"; //String to input; Change at will
 		boolean flag;
 		
 		flag = palindromeDetector(m);
@@ -20,9 +18,12 @@ public class PalindromeDetection {
 		System.out.println(flag);
 	}
 	
-	public static boolean palindromeDetector(String string){	
+	public static boolean palindromeDetector(String string){
+		
+		//Converts string to char array so it could be iterable
 		char[] charConvert = string.toCharArray();
 		
+		//Used to point the last position in reverse to the array
 		int endIndex = charConvert.length - 1;
 		
 		for(int i = 0; i < charConvert.length/2; i++){
