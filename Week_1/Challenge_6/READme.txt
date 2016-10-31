@@ -1,0 +1,1 @@
+Searches the longest common prefix in a string array, or an empty string if there is none.
