@@ -8,19 +8,7 @@
 **/
 
 public class DuplicateRemover {
-	public static void main(String[] args){
-		int[] sortedList = {}; //Change at will
-		int length;
-		
-		length = duplicateRemover(sortedList);
-
-		System.out.println(length);
-		/*//Print sorter list without duplicates
-		for (int i = 0; i < sortedList.length; i++){
-			System.out.print(sortedList[i] + " ");
-		}*/
-	}
-
+	
 	public static int duplicateRemover(int[] sortedList){
 		int arrayLength = sortedList.length;
 		int index;
