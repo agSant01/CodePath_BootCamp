@@ -9,19 +9,25 @@
 
 public class DuplicateRemover {
 	public static void main(String[] args){
-		int[] sortedList = {1,1,1,2,3,3,3,4,5,6,8}; //Change at will
+		int[] sortedList = {}; //Change at will
+		int length;
+		
+		length = duplicateRemover(sortedList);
 
-		sortedList = duplicateRemover(sortedList);
-
-		//Print sorter list without duplicates
+		System.out.println(length);
+		/*//Print sorter list without duplicates
 		for (int i = 0; i < sortedList.length; i++){
 			System.out.print(sortedList[i] + " ");
-		}
+		}*/
 	}
 
-	public static int[] duplicateRemover(int[] sortedList){
+	public static int duplicateRemover(int[] sortedList){
 		int arrayLength = sortedList.length;
 		int index;
+		
+		if(arrayLength <= 1 || sortedList == null){
+			return arrayLength;
+		}
 
 		for (int i = 0; i < arrayLength ; i ++){
 			index = i + 1;
@@ -52,6 +58,12 @@ public class DuplicateRemover {
 				sortedList[index] = 0;
 			}
 		}
-		return sortedList;
+		
+		index = 0;
+		while(sortedList[index] != 0){
+			index++;
+		}
+		
+		return index;
 	}
 }
