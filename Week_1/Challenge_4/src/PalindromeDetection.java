@@ -19,20 +19,14 @@ public class PalindromeDetection {
 	}
 	
 	public static boolean palindromeDetector(String string){
+		int endIndex = string.length() - 1;
 		
-		//Converts string to char array so it could be iterable
-		char[] charConvert = string.toCharArray();
-		
-		//Used to point the last position in reverse to the array
-		int endIndex = charConvert.length - 1;
-		
-		for(int i = 0; i < charConvert.length/2; i++){
-			if(charConvert[i] != charConvert[endIndex]){
+		for(int begin = 0; begin < string.length()/2; begin++){
+			if(string.charAt(begin) != string.charAt(endIndex)){
 				return false;
 			}
 			endIndex--;
 		}
 		return true;
 	}
-
 }
