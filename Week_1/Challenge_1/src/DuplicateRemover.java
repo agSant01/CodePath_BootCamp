@@ -26,7 +26,6 @@ public class DuplicateRemover {
 				index++;
 			}
 		}
-
 		//Travels through the array to move 0's to the right end
 		for(int i = 0; i < arrayLength; i++){
 			index = i;
